@@ -1,10 +1,10 @@
-package edu.escuelaing.arep.app;
+package edu.escuelaing.arep.app.annotations;
 
 import java.lang.annotation.*;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-
-@interface GetMapping {
+public
+@interface RequestMapping {
     public String route();
 }
