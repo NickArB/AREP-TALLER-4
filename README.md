@@ -67,15 +67,15 @@ http://localhost:35000/index.html
 
 Dentro de WebComponent se encuentran dos métodos que reciben peticiones dentro de las rutas "sample" y "cos" respectivamente.
 
-![alt text](image-1.png)
+![alt text](images/image2.png)
 
 Prueba para la ruta `sample`
 
-![alt text](image.png)
+![alt text](images/image3.png)
 
 Prueba para la ruta `cos`
 
-![alt text](image-2.png)
+![alt text](images/image4.png)
 
 
 ## Construido con
