@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mini-Spring</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <h1>Test here your mini spring!</h1>
+        <form>
+            <label>Action name:</label><br>
+            <input type="text" id="action" placeholder="Action route"><br><br>
+            <label>Argument:</label><br>
+            <input type="text" id="arg" placeholder="Argument for your action"><br><br>
+
+            <input type="button" value="Action!" onclick="callRestService(action, arg)">
+        </form>
+        <div id="getresp"></div>
+
+        <script>
+            function callRestService(action, arg){
+                let url = "/"+ action.value +"/" + arg.value;
+
+                fetch(url, { method: 'GET' })
+                    .then(x => x.text())
+                    .then(y => {
+                        document.getElementById("getresp").innerHTML = "";
+                        document.getElementById("getresp").innerHTML = y;
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        </script>
+    </body>
+</html>
